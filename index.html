@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>3 Column Layout</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+.nav {
+	height:40px;
+	width:700px; 
+	display:block;
+	margin:0 auto;
+	padding-top:156px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+.nav a{
+	display:block;
+	text-decoration: none;
+	font-family: monospace;
+	font-weight: bold;
+	font-size:13pt;
+	color:#112233;
+}
+
+.nav a:hover{
+	background:#223433;
+	color:#f0f1f5;
+	border-radius:20px;
+}
+
+.nav ul{
+	list-style: none;
+}
+
+.nav ul li{
+	float:left;
+	width:140px;
+	height:40px;
+	line-height: 40px;
+	background:#FF9900;
+}
+
+.nav ul ul li{
+	position:relative;
+	display:none;
+}
+
+.nav ul ul ul{
+	display:none;
+}
+
+.nav ul li:hover ul li{
+	display: block;
+}
+
+
+.nav ul ul li:hover ul{
+	display:block;
+	position:absolute;
+	width:140px;
+	left:140px;
+	top:0px;
+}
+</style>
+</head>
+<body>
+<div id="mainBody">
+	<div id="wrapper">	
+		<div id="header">
+		
+		<div class="nav">
+				<ul>
+					<li><a href="home.html" target="page">Home</a></li>
+					<li><a href="about.html" target="page">About</a></li>
+					<li><a href="prog.html" target="page">Programming</a>
+						<ul>
+							<li><a href="#">C++</a></li>
+							<li><a href="#">C#</a></li>
+							<li><a href="#">Java</a></li>
+							<li><a href="#">Web Dev</a>
+								<ul>
+									<li><a href="#">Javascript</a></li>
+									<li><a href="#">PHP</a></li>
+									<li><a href="#">Ruby</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Python</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Projects</a>
+						<ul>
+							<li><a href="#">Android</a></li>
+							<li><a href="#">iOS</a></li>
+							<li><a href="#">Web</a></li>
+							<li><a href="#">Windows</a></li>
+						</ul>
+					</li>
+					<li><a href="contact.html" target="page">Contact</a></li>
+				</ul>
+	    </div>
+		</div>
+		<div id="centre">
+			<div class="left"></div>
+			<div class="content">
+<iframe name="page" src="home.html" height="700" width="100%" frameborder="0"></iframe>			
+			</div>
+		    <div class="right"></div>	
+		</div>
+		<div id="footer"></div>
+	</div>
+</div>
+</body>
+</html>

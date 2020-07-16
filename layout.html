@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <style>
+        * {
+            font-family: sans-serif;
+            /* Change your font family */
+        }
+        
+        .mainBody {
+            height: 1000px;
+            width: 100%;
+            border: 3px solid #009879;
+        }
+        
+        .left {
+            height: 1000px;
+            width: 75%;
+            float: left;
+        }
+        
+        .right {
+            height: 1000px;
+            width: 25%;
+            float: left;
+        }
+        
+        .upper_left {
+            height: 250px;
+            width: 100%;
+        }
+        
+        .name {
+            height: 50px;
+            width: 100%;
+            background: #009879;
+            color: white;
+        }
+        
+        .name h1 {
+            text-align: center;
+            line-height: 50px;
+        }
+        
+        .lower_left {
+            height: 750px;
+            width: 100%;
+        }
+        
+        .upper_right {
+            height: 250px;
+            width: 100%;
+        }
+        
+        .lower_right {
+            height: 750px;
+            width: 100%;
+        }
+        
+        .wrapper {
+            height: 1000px;
+            width: 90%;
+            margin-right: 5%;
+            margin-left: 5%;
+            float: left;
+        }
+        
+        .linksandcontact {
+            border-collapse: collapse;
+            margin: 20px 5px;
+            font-size: 0.7em;
+            min-width: 100%;
+            border-radius: 5px 5px 0 0;
+            overflow: hidden;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        }
+        
+        .linksandcontact thead tr {
+            background-color: #009879;
+            color: #ffffff;
+            text-align: left;
+            font-weight: bold;
+        }
+        
+        .linksandcontact th,
+        .linksandcontact td {
+            padding: 5px 5px;
+        }
+        
+        .linksandcontact tbody tr {
+            border-bottom: 1px solid #dddddd;
+        }
+        
+        .linksandcontact tbody tr:nth-of-type(even) {
+            background-color: #f3f3f3;
+        }
+        
+        .linksandcontact tbody tr:last-of-type {
+            border-bottom: 1px solid #009879;
+        }
+        
+        .linksandcontact tbody tr.active-row {
+            font-weight: bold;
+            color: #009879;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="mainbody">
+        <div class="wrapper">
+
+
+            <div class="left">
+                <div class="upper_left">
+                    <div class="name">
+                        <h1><label>Mohd Baqer Haider</label></h1>
+                    </div>
+                    <div>
+                        <h3>Career Objective</h3>
+                        <p> To obtain an internship in the field of Backend Development with Python and Django.</p>
+                        <hr/>
+                    </div>
+                </div>
+
+                <div class="lower_left">
+                    <p>
+                        <h3>Summary</h3>
+                    </p>
+                    <p>{{user_profile.summary}}</p>
+                    <hr/>
+
+                    <p>
+                        <h3>Skills</h3>
+                    </p>
+                    <p>{{user_profile.skills}}</p>
+                    <hr/>
+
+                    <p>
+                        <h3>Education</h3>
+                    </p>
+
+                    <table style="width:100%">
+                        <tr>
+                            <th>Degree/Certificate</th>
+                            <th>Board/University</th>
+                            <th>Year Of Passing</th>
+                            <th>Percentage/CGPA</th>
+                        </tr>
+                        <tr>
+                            <td>{{user_profile.degree}}</td>
+                            <td>{{user_profile.university}}</td>
+                            <td>2021</td>
+                            <td>85</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+
+
+
+                    <p>
+                        <h3>Work Experience</h3>
+                    </p>
+                    <p>{{user_profile.previous_work}}</p>
+                    <hr/>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="right">
+
+                <div class="upper_right">
+                    <table class="linksandcontact">
+                        <thead>
+                            <tr>
+                                <th colspan="2">Contact</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    Email
+                                </td>
+                                <td>haiderbaqer@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    Phone
+                                </td>
+                                <td>+918299262437</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+
+
+
+                </div>
+
+                <div class="lower_right">
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
